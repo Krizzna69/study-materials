@@ -1,11 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>College Study Materials</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #FFEED9; /* Light Peach */
+      color: #333;
+    }
+
+    /* Container to center content */
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #39A7FF; /* Vibrant Blue */
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    /* Intro section */
+    .intro {
+      text-align: center;
+      padding: 50px 0;
+      background-color: #87C4FF; /* Soft Sky Blue */
+    }
+
+    .intro h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      font-size: 1.1em;
+    }
+
+    /* Year options section */
+    .year-options {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px 0;
+    }
+
+    /* Box layout for the years */
+    .year-box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      width: 45%; /* Default width for side-by-side boxes */
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .year-box h3 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      color: #39A7FF; /* Vibrant Blue for text */
+    }
+
+    .year-box .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #39A7FF; /* Vibrant Blue */
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .year-box .btn:hover {
+      background-color: #87C4FF; /* Soft Sky Blue on hover */
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #39A7FF; /* Vibrant Blue */
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 1em;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 1024px) {
+      /* Laptop layout: 1st & 2nd years on the first row, 3rd & 4th on the second row */
+      .year-options {
+        flex-direction: column; /* Stack the rows vertically */
+      }
+      
+      .year-box {
+        width: 45%; /* 2 boxes per row */
+        margin: 10px auto; /* Center the boxes */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .year-box {
+        width: 45%; /* 2 boxes per row for medium screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .year-box {
+        width: 90%; /* Stack boxes vertically on small screens */
+        margin: 10px auto; /* Center the boxes */
+      }
+    }
+  </style>
 </head>
 <body>
-    <p>Hello</p>
+
+  <header>
+    <div class="container">
+      <h1>Welcome to NRI College Study Materials</h1>
+      <p>Your one-stop resource hub for all your study needs</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="container">
+        <h2>Select Your Year</h2>
+        <p>Choose your year below to access the study materials.</p>
+      </div>
+    </section>
+
+    <section class="year-options">
+      <div class="container">
+        <!-- 1st and 2nd Year - Side by Side -->
+        <div class="year-box">
+          <h3>1st Year</h3>
+          <a href="#" class="btn">View Materials</a>
+        </div>
+        <div class="year-box">
+          <h3>2nd Year</h3>
+          <a href="#" class="btn">View Materials</a>
+        </div>
+
+        <!-- 3rd and 4th Year - Side by Side -->
+        <div class="year-box">
+          <h3>3rd Year</h3>
+          <a href="#" class="btn">View Materials</a>
+        </div>
+        <div class="year-box">
+          <h3>4th Year</h3>
+          <a href="#" class="btn">View Materials</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 College Study Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
